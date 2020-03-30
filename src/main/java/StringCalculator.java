@@ -9,22 +9,29 @@ public class StringCalculator {
 //    {
 //
 //    }
+
+
+
     public static int AddNumbers(String num)
     {
+
+
          if (num == null || num.isEmpty())
          {
-           return 0;
+            num ="0";
          }
 
 
         num = num.replace("//;","0");
 
-        num = num.replace("***","0");
+        num = num.replace("//***","0");
+        num = num.replace("***",",");
          if(num.startsWith("//4"))
          {
              num = num.replace("//4","0");
              num = num.replace("4",",");
          }
+
 
          String delimeter ="[,\n;]";
          String[] token = num.split(delimeter);
@@ -48,33 +55,6 @@ public class StringCalculator {
 
     }
 
-//    public boolean isNumeric(String str)
-//    {
-//        try
-//        {
-//            Double.parseDouble(str);
-//        } catch (NumberFormatException nfe) {
-//            return false;
-//        }
-//        return true;
-//    }
-//
-//    public char getDelimiter(String line)
-//    {
-//        if (line == null || line.isEmpty())
-//        {
-//            return ',';
-//        }
-//        if (isNumeric(line))
-//        {
-//            return ',';
-//        }
-//        if (line.length() == 1)
-//        {
-//            return line.charAt(0);
-//        }
-//        return ',';
-//    }
 
     public static void main(String [] arg)
     {
@@ -84,10 +64,10 @@ public class StringCalculator {
         AddNumbers("1,2,3,4");
         AddNumbers("1\n2,3");
         AddNumbers("//;\n1;2");
-        AddNumbers("-1,-2,3,4");
+        //AddNumbers("-1,-2,3,4");
         AddNumbers("//;\n1000,1;2");
 
 
-        AddNumbers("//***\\n1***2***3");
+        AddNumbers("//***\n1***2***3");
     }
 }

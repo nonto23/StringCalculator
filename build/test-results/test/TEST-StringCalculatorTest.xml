@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-27T12:29:42" hostname="Hp" time="0.01">
+<testsuite name="StringCalculatorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-30T14:54:05" hostname="Hp" time="0.013">
   <properties/>
-  <testcase name="stringSingleValue" classname="StringCalculatorTest" time="0.01"/>
-  <system-out><![CDATA[]]></system-out>
+  <testcase name="StringofMoreThanTwoValues" classname="StringCalculatorTest" time="0.013"/>
+  <system-out><![CDATA[10
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
